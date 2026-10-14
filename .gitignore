@@ -43,3 +43,20 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Android local configuration & native builds (OpenCV C++)
+**/android/local.properties
+**/android/.gradle/
+**/android/.cxx/
+**/android/captures/
+*.jks
+*.keystore
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code
+.vscode/
+
