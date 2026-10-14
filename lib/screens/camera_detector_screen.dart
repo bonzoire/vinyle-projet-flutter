@@ -297,7 +297,7 @@ class _CameraDetectorScreenState extends State<CameraDetectorScreen>
           ),
           SizedBox(height: 8),
           Text(
-            'Détection du centre et calcul des profils radiaux',
+            'Redressement de perspective & analyse texturale Sobel',
             style: TextStyle(color: Colors.white60, fontSize: 13),
           ),
         ],
@@ -389,8 +389,10 @@ class _CameraDetectorScreenState extends State<CameraDetectorScreen>
                       style: const TextStyle(color: Colors.white70, fontSize: 13),
                     ),
                     Text(
-                      'Sillons : ${result.trackRadii.length}',
-                      style: const TextStyle(color: Colors.white70, fontSize: 13),
+                      result.isEllipse
+                          ? 'Angle : ${result.ellipseAngle.toStringAsFixed(0)}°'
+                          : 'Cercle standard',
+                      style: const TextStyle(color: Colors.amberAccent, fontSize: 13),
                     ),
                   ],
                 ),
